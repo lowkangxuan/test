@@ -14,7 +14,7 @@
     <title>{{title}}</title>
     <meta name="description" content="Personal Website.">
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{{'/css/style.css' | url}}">
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top px-4 fw-bold">
@@ -25,9 +25,9 @@
             </button>
             <div class="collapse navbar-collapse flex-grow-0" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link px-3 {{ "active" if "/" in page.url }}" aria-current="page" href="/">Home</a>
-                <a class="nav-link px-3 {{ "active" if "projects" in page.url }}" href="/projects">Projects</a>
-                <a class="nav-link px-3 {{ "active" if "contact" in page.url }}" href="/contact">Contact</a>
+                <a href="{{'/' | url}}" class="nav-link px-3 {% if not "projects" in page.url %} active {% endif %}" aria-label="Home">Home</a>
+                <a href="{{'/projects' | url}}" class="nav-link px-3 {{ "active" if "projects" in page.url }}" aria-label="My Projects">Projects</a>
+                <a href="{{'/contact' | url}}" class="nav-link px-3 {{ "active" if "contact" in page.url }}" aria-label="Contact Me">Contact</a>
             </div>
             </div>
         </div>

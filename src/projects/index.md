@@ -1,6 +1,5 @@
 ---
 title: Projects
-navhome: true
 ---
 
 ### Projects
