@@ -30,4 +30,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./_site
-          github_token: ${{ secrets.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 }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
